@@ -121,8 +121,9 @@ def res(jobfile):
 
     Job_Desc = 0
     LIST_OF_TXT_FILES = []
-    os.chdir('../Job_Description')
-    f = open(jobfile , 'r')
+    #os.chdir('../Job_Description')
+    #f = open(jobfile , 'r')
+    f = open(os.getcwd() + '/../Job_Description' + jobfile[17:] , 'r', encoding="utf8", errors='ignore')
     text = f.read()
         
     try:
